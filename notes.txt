@@ -1,0 +1,1 @@
+https://docs.kcp.io/kcp/v0.26/setup/quickstart/
