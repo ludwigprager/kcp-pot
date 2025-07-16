@@ -1,0 +1,13 @@
+apiVersion: infra.example.com/v1alpha1 # Matches the group and version from the CRD
+kind: VM                              # Matches the kind from the CRD
+metadata:
+  name: production-web-server-01
+  namespace: default # VMs are namespaced resources
+spec:
+  diskSize: 100        # 100 GiB disk
+  ram: 8192            # 8192 MiB (8 GiB) RAM
+  users:
+    - devops-admin
+    - app-user
+    - monitoring-agent
+

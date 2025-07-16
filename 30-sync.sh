@@ -10,14 +10,9 @@ cd $BASEDIR
 export PATH=$PATH:$(realpath .)/bin/
 export KUBECONFIG=$(realpath .)/.kcp/admin.kubeconfig
 
-kubectl config use-context root
+kubectl kcp workspace create my-workspace || true
+kubectl kcp workspace use my-workspace
 
-#kubectl ws use root:org:my-workspace
-kubectl ws create my-workspace
-kubectl ws use my-workspace
+#kubectl apply -f api-binding-kubernetes.yaml
 
-
-kubectl apply -f widget-crd.yaml
-
-kubectl apply -f widget-sample.yaml
-
+#kubectl apply -f syncer.yaml

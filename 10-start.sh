@@ -26,8 +26,8 @@ if [[ ! -x bin/kubectl-kcp ]]; then
 fi
 
 if [[ ! -x bin/kubectl-ws ]]; then
-  wget -nc https://github.com/kcp-dev/kcp/releases/download/v0.27.1/kubectl-ws-plugin_0.27.1_darwin_amd64.tar.gz
-  tar zxvf kubectl-ws-plugin_0.27.1_darwin_amd64.tar.gz
+  wget -nc https://github.com/kcp-dev/kcp/releases/download/v0.27.1/kubectl-ws-plugin_0.27.1_linux_amd64.tar.gz
+  tar zxvf kubectl-ws-plugin_0.27.1_linux_amd64.tar.gz
 fi
 
 if ! screen -list | grep -q "kcp"; then

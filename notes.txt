@@ -1,1 +1,35 @@
 https://docs.kcp.io/kcp/v0.26/setup/quickstart/
+
+git show HEAD^:README.md > README.md 
+
+
+---
+
+Example Workflow: Create and Use a Hierarchical Workspace
+
+# Start in root
+kubectl ws .
+
+# Create an org workspace
+kubectl ws create my-org --type=organization
+
+# Switch to it
+kubectl ws use my-org
+
+# Create a child workspace inside my-org
+kubectl ws create my-project --enter  # Creates and enters root:my-org:my-project
+
+# Now use it (e.g., create a deployment)
+kubectl create deployment nginx --image=nginx
+
+# View resources in the workspace
+kubectl get deployments
+
+# Switch back to parent
+kubectl ws use ..
+
+# View workspace tree
+kubectl ws tree
+
+
+
