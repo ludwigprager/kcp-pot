@@ -1,0 +1,8 @@
+# widget-sample.yaml
+apiVersion: example.io/v1
+kind: Widget
+metadata:
+  name: test-widget
+spec:
+  size: large
+
